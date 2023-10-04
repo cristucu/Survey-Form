@@ -1,0 +1,179 @@
+<script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src = "https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src = "script.js"></script>
+  </head>
+  <body>
+    <h1 id ="title">Survey Form</h1>
+  <div id="form-outer">
+    <p id = "description"> Let us know how we can improve Cocktails&Dreams</p>
+  <form id="survey-form" action="index.html" method="get">
+    <div class="rows">
+      <div class = "labels">
+      <label id= "name-label" for="name">* Name</label>
+    </div>
+    <div class="rightSide">
+      <input type="text" name="Name" id="name" class = "input-field" placeholder="Enter your name" required>
+      </div>
+    </div>
+    <div class="rows">
+      <div class = "labels">
+      <label id="email-label" for="email">* Email</label>
+    </div>
+    <div class="rightSide">
+      <input type="email" name="email" id="email" class = "input-field" placeholder="Enter your email" required>
+      </div>
+    </div>
+    <div class="rows">
+      <div class = "labels">
+      <label id= "number-label"  for="age">* Age <br>(You must be of legal age to submit this survey)</label>
+    </div>
+    <div class="rightSide">
+      <input type= "number" name="age" id="number" min="18" max="100" class = "input-field" placeholder="Enter your age" required>
+      </div>
+    </div>
+    <div class= "rows">
+      <div class= "labels">
+        <label for="currentPos">What is your working field?</label>
+      </div>
+      <div class= "rightSide">
+        <select id = "dropdown" name="currentPos" class= "dropdown">
+          <option disabled value>Select an option</option>
+          <option value="industry">Industry</option>
+          <option value="IT">IT Field</option>
+          <option value="Banking">Banking</option>
+          <option value="Antreprenour">Antreprenour</option>
+          <option value="Engineering">Engineering</option>
+          <option value="private">Prefer not to say</option>
+          <option value="other">Other Field</option>
+        </select>
+      </div>
+    </div>
+      <div class="rows">
+        <div class="labels">
+          <label for="userRatings">How likely is that yo will recommend us to your friends?</label>
+        </div>
+        <div class="rightSide">
+          <ul style="list-style:none;">
+            <li class= "radio">
+              <label>Definetly
+              <input name="radio-buttons" value="1" type="radio" class="userRatings">
+              </label>
+            </li>
+            <li class="radio">
+              <label>Maybe
+                <input name="radio-buttons" value="2" type="radio" class="userRatings">
+              </label>
+            </li>
+            <li class = "radio">
+              <label>Not Likely
+              <input name="radio-buttons" value="3" type="radio" class="userRatings">
+              </label>
+            </li>
+            <li class="radio">
+              <label>Not Sure
+                <input name="radio-buttons" value="4" type="radio" class= "userRatings">
+                </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="labels">
+          <label for="like">What do you like the most in our establishment?</label>
+        </div>
+        <div class="rightSide">
+          <select id = "like" name="mostLike" class= "dropdown">
+            <option disabled value>Select an option</option>
+            <option value="service">Service</option>
+            <option value="food">Food</option>
+            <option value="specialty drinks">Specialty Cocktails</option>
+            <option value="atmosphere">Atmosphere</option>
+            <option value="bartenders">Bartenders</option>
+            <option value="location">Location</option>
+            <option value="prices">Prices</option>
+          </select>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="labels">
+          <label for="preferences">Things that should be improved in the future<br>(Check all that applies)</label>
+        </div>
+        <div class="rightSide">
+          <ul id = "preferences" style = "list-style: none;">
+            <li class="checkbox">
+            <label>
+              Quality of food
+            <input name="prefer" value="1" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Quality of drinks
+            <input name="prefer" value="2" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Quality of music
+            <input name="prefer" value="3" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Quality of Service
+            <input name="prefer" value="4" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Quality of personnel
+            <input name="prefer" value="5" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Events
+            <input name="prefer" value="6" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Prices
+            <input name="prefer" value="7" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Drinks diversity
+            <input name="prefer" value="8" type="checkbox" class="userRatings">
+            </label>
+            </li>
+            <li class="checkbox">
+            <label>
+              Food diversity
+            <input name="prefer" value="9" type="checkbox" class="userRatings">
+            </label>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="rows">
+        <div class="labels">
+          <label for="comments">Comments or sugestions?<br>(Any feedback is welcomed)</label>
+        </div>
+        <div class="rightSide">
+          <textarea id = "comments" class="input-field" style = "height:100px; resize:vertical" name = "comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+      </div>
+      <button id = "submit" type="submit" name="button">Submit</button>
+  </form>
+</div>
+  </body>
+</html>
